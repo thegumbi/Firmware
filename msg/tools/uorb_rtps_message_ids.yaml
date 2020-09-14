@@ -7,44 +7,44 @@ rtps:
     id: 3
   - msg: adc_report
     id: 4
-    send: true
+    # send: true
   - msg: airspeed
     id: 5
-    send: true
+    # send: true
   - msg: battery_status
     id: 6
-    send: true
+    # send: true
   - msg: camera_capture
     id: 7
-    receive: true
+    # receive: true
   - msg: camera_trigger
     id: 8
-    receive: true
+    # receive: true
   - msg: collision_report
     id: 9
-    receive: true
+    # receive: true
   - msg: commander_state
     id: 10
   - msg: cpuload
     id: 11
-    send: true
+    # send: true
   - msg: debug_array
     id: 12
-    receive: true
+    # receive: true
   - msg: debug_key_value
     id: 13
-    receive: true
+    # receive: true
   - msg: debug_value
     id: 14
-    receive: true
+    # receive: true
   - msg: debug_vect
     id: 15
-    receive: true
+    # receive: true
   - msg: differential_pressure
     id: 16
   - msg: distance_sensor
     id: 17
-    send: true
+    # send: true
   - msg: estimator_innovations
     id: 18
   - msg: ekf2_timestamps
@@ -59,7 +59,7 @@ rtps:
     id: 23
   - msg: estimator_status
     id: 24
-    send: true
+    # send: true
   - msg: follow_target
     id: 25
   - msg: geofence_result
@@ -70,12 +70,12 @@ rtps:
     id: 28
   - msg: home_position
     id: 29
-    send: true
+    # send: true
   - msg: input_rc
     id: 30
   - msg: iridiumsbd_status
     id: 31
-    send: true
+    # send: true
   - msg: irlock_report
     id: 32
   - msg: landing_target_innovations
@@ -100,12 +100,13 @@ rtps:
     id: 42
   - msg: obstacle_distance
     id: 43
-    receive: true
+    # receive: true
   - msg: offboard_control_mode
     id: 44
+    receive: true
   - msg: optical_flow
     id: 45
-    receive: true
+    # receive: true
   - msg: parameter_update
     id: 46
   - msg: ping
@@ -130,7 +131,7 @@ rtps:
     id: 55
   - msg: radio_status
     id: 56
-    send: true
+    # send: true
   - msg: rate_ctrl_status
     id: 57
   - msg: rc_channels
@@ -141,17 +142,17 @@ rtps:
     id: 60
   - msg: satellite_info
     id: 61
-    send: true
+    # send: true
   - msg: sensor_accel
     id: 62
   - msg: sensor_baro
     id: 63
-    send: true
+    # send: true
   - msg: estimator_sensor_bias
     id: 64
   - msg: sensor_combined
     id: 65
-    send: true
+    # send: true
   - msg: sensor_correction
     id: 66
   - msg: sensor_gyro
@@ -162,7 +163,7 @@ rtps:
     id: 69
   - msg: sensor_selection
     id: 70
-    send: true
+    # send: true
   - msg: px4io_status
     id: 71
   - msg: subsystem_info
@@ -183,7 +184,7 @@ rtps:
     send: true
   - msg: trajectory_waypoint
     id: 79
-    receive: true
+    # receive: true
   - msg: transponder_report
     id: 80
   - msg: tune_control
@@ -200,13 +201,15 @@ rtps:
     id: 86
   - msg: vehicle_attitude
     id: 87
-    send: true
+    # send: true
   - msg: vehicle_attitude_setpoint
     id: 88
   - msg: vehicle_command
     id: 89
+    receive: true
   - msg: vehicle_command_ack
     id: 90
+    send: true
   - msg: vehicle_constraints
     id: 91
   - msg: vehicle_control_mode
@@ -225,27 +228,29 @@ rtps:
     id: 98
   - msg: vehicle_odometry
     id: 99
-    send: true
+    # send: true
   - msg: vehicle_rates_setpoint
     id: 100
   - msg: vehicle_roi
     id: 101
   - msg: vehicle_status
     id: 102
+    send: true
   - msg: vehicle_status_flags
     id: 103
+    send: true
   - msg: vehicle_trajectory_waypoint
     id: 104
-    receive: true
+    # receive: true
   - msg: vtol_vehicle_status
     id: 105
-    send: true
+    # send: true
   - msg: wind_estimate
     id: 106
-    send: true
+    # send: true
   - msg: collision_constraints
     id: 107
-    send: true
+    # send: true
   - msg: orbit_status
     id: 108
   - msg: power_monitor
@@ -262,7 +267,7 @@ rtps:
     id: 115
   - msg: onboard_computer_status
     id: 116
-    receive: true
+    # receive: true
   - msg: cellular_status
     id: 117
   - msg: sensor_accel_fifo
@@ -334,11 +339,11 @@ rtps:
   - msg: vehicle_mocap_odometry
     alias: vehicle_odometry
     id: 161
-    receive: true
+    # receive: true
   - msg: vehicle_visual_odometry
     id: 162
     alias: vehicle_odometry
-    receive: true
+    # receive: true
   - msg: vehicle_trajectory_waypoint_desired
     id: 163
     alias: vehicle_trajectory_waypoint
