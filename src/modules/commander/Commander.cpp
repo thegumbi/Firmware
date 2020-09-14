@@ -4185,6 +4185,8 @@ Commander::offboard_control_update()
 				_status_changed = true;
 			}
 		}
+
+		// mavlink_log_info(&mavlink_log_pub, "Offboard time elapsed: %lu", hrt_elapsed_time(&offboard_control_mode.timestamp));
 	}
 
 	_offboard_available.set_state_and_update(
