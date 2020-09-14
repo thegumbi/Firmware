@@ -104,7 +104,7 @@ def add_serialize_functions(fields, scope_name):
                     print("    ucdr_serialize_array_" + str(get_serialization_type_name(field.base_type)) + "(writer, input->" + scope_name+str(field.name) + ", " + str(field.array_len) + ");")
             else:
                 name = field.name
-                children_fields = get_children_fields(field.base_type, search_path)
+                children_fields = get_unsorted_children_fields(field.base_type, search_path)
                 if (scope_name):  name = scope_name + name
                 if (not field.is_array):
                     add_serialize_functions(children_fields, name + '.')
@@ -122,7 +122,7 @@ def add_deserialize_functions(fields, scope_name):
                     print("    ucdr_deserialize_array_" + str(get_serialization_type_name(field.base_type)) + "(reader, output->" + scope_name+str(field.name) + ", " + str(field.array_len) + ");")
             else:
                 name = field.name
-                children_fields = get_children_fields(field.base_type, search_path)
+                children_fields = get_unsorted_children_fields(field.base_type, search_path)
                 if (scope_name):  name = scope_name + name
                 if (not field.is_array):
                     add_deserialize_functions(children_fields, name + '.')
