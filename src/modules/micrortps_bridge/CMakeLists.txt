@@ -88,6 +88,7 @@ endif()
 
 if (GENERATE_RTPS_BRIDGE)
 	add_subdirectory(micrortps_client)
+	add_subdirectory(set_time)
 
 	###############################################################################
 	# micro-cdr serialization
